@@ -1,5 +1,13 @@
-var template = <p>Hello salut</p>;
+class Header extends React.Component {
+    render() {
+        return <p>This is From Header</p>;
+    }
+}
 
-var appRoot = document.getElementById('app');
+const jsx = (
+    <div>
+        <Header />
+    </div>
+);
 
-ReactDOM.render(template, appRoot)
+ReactDOM.render(jsx, document.getElementById('app'));
