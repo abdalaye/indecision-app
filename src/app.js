@@ -5,15 +5,11 @@ class IndecisionApp extends React.Component {
         this.handlePick = this.handlePick.bind(this);
         this.handleAddOption = this.handleAddOption.bind(this);
         this.state = {
-            options: []
+            options: props.options
         };
     }
     handleDeleteOptions() {
-        this.setState(() => {
-            return {
-                options: []
-            };
-        });
+        this.setState(() => ({ options: [] }))
     }
 
     handlePick() {
@@ -30,11 +26,7 @@ class IndecisionApp extends React.Component {
         }
 
 
-        this.setState((prevState) => {
-            return {
-                options: prevState.options.concat([option])
-            }
-        });
+        this.setState((prevState) => ({ options: prevState.options.concat([option]) }));
     }
 
     render() {
@@ -56,6 +48,10 @@ class IndecisionApp extends React.Component {
         );
     }
 }
+
+IndecisionApp.defaultProps = {
+    options: []
+};
 
 const Header = (props) => {
     return (
@@ -118,9 +114,7 @@ class AddOption extends React.Component {
         const option = e.target.elements.option.value.trim();
         const error = this.props.handleAddOption(option);
 
-        this.setState(() => {
-            return { error };
-        });
+        this.setState(() => ({ error }));
 
         if(!error) {
             e.target.elements.option.value = "";
