@@ -151,13 +151,13 @@ class AddOption extends React.Component {
 }
 
 //StateLess component
-const User = () => {
+const User = (props) => {
     return (
         <div>
-            <p>Name: </p>
-            <p>Age: </p>
+            <p>Name: {props.name && props.name} </p>
+            <p>Age: {props.age && props.age} </p>
         </div>
     );
 }
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+ReactDOM.render(<User name='Abdalaye' age="25" />, document.getElementById('app'));

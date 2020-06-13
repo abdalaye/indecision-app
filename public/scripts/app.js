@@ -264,21 +264,25 @@ var AddOption = function (_React$Component6) {
 //StateLess component
 
 
-var User = function User() {
+var User = function User(props) {
     return React.createElement(
         'div',
         null,
         React.createElement(
             'p',
             null,
-            'Name: '
+            'Name: ',
+            props.name && props.name,
+            ' '
         ),
         React.createElement(
             'p',
             null,
-            'Age: '
+            'Age: ',
+            props.age && props.age,
+            ' '
         )
     );
 };
 
-ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(User, { name: 'Abdalaye', age: '25' }), document.getElementById('app'));
