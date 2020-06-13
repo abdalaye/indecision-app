@@ -64,6 +64,24 @@ var IndecisionApp = function (_React$Component) {
                 return { options: prevState.options.concat([option]) };
             });
         }
+
+        //COMPONENT FOR LIFECYCLE
+
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            console.log("Après chargement du component");
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            console.log("Après changement au niveau du component");
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log("Avant de quitter le component");
+        }
     }, {
         key: 'render',
         value: function render() {

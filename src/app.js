@@ -39,6 +39,19 @@ class IndecisionApp extends React.Component {
         this.setState((prevState) => ({ options: prevState.options.concat([option]) }));
     }
 
+    //COMPONENT FOR LIFECYCLE
+    componentDidMount() {
+        console.log("Après chargement du component");
+    }
+
+    componentDidUpdate() {
+        console.log("Après changement au niveau du component");
+    }
+
+    componentWillUnmount() {
+        console.log("Avant de quitter le component");
+    }
+
     render() {
         return (
             <div>
