@@ -65,9 +65,47 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__person__ = __webpack_require__(2);
+
+
 
 console.log('app.js is running!');
+// console.log(square(4));
+// console.log(add(4, 4));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__person__["a" /* canDrink */])(21))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+console.log('Util.js is running !');
+
+const square = (x) => x*x;
+/* unused harmony export square */
+
+const add = (a, b) => a+b;
+/* unused harmony export add */
+
+
+//export { square, add };
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const isAdult = (age) => age >= 18
+/* unused harmony export isAdult */
+
+const canDrink = (age) => age >= 21
+/* harmony export (immutable) */ __webpack_exports__["a"] = canDrink;
+
 
 /***/ })
 /******/ ]);
