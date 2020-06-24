@@ -5,11 +5,16 @@ const Options = (props) => {
     const options = props.options;
     return (
         <div>
-            <button 
-                className="button button--link"
-                onClick={props.handleDeleteOptions}
-            >Remove All</button>
-            {options.length === 0 && <p>Please add option to get Started!</p>}
+            <div className="widget-header">
+                <h3 className="widget-header__title">Your Options</h3>
+                <button 
+                    className="button button--link"
+                    onClick={props.handleDeleteOptions}
+                >
+                    Remove All
+                </button>
+            </div>
+            {options.length === 0 && <p className="widget__message">Please add option to get Started!</p>}
             {
                 options.map((option) => 
                     <Option 
