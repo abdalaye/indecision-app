@@ -22,7 +22,7 @@
     padding: $s-size;
 }
 
-@media (min-width: $desktop-breakpoint) {
+@media (max-width: $desktop-breakpoint) {
     .add-option {
         flex-direction: column;
     }
